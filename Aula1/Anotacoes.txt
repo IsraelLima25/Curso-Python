@@ -1,0 +1,8 @@
+Anotações Aula 01
+
+/*/*/*/*/*/************/*/*/*/**/
+
+Programa: IDLE
+python 3.7 windows.
+
+C:\Users\ALUNOTI\AppData\Local\Programs\Python\Python37-32

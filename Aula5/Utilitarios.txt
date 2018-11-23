@@ -1,0 +1,4 @@
+Flask(Framework Python)
+instalar o flask (pip install flask)
+comando para rodar o programa(python controller.py)
+https://luizclaudio.github.io/aprendendo-python

@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+    <title>Minha Aplicação - Lista de Coisas</title>
+</head>
+
+<body>
+    <img src="/static/flask_logo.png" height="82" width="100">
+
+    <h1>Minha Aplicação</h1>
+
+    <h2>Lista de Coisas</h2>
+
+    <ul>
+        <li><a href="/inicial">Página Inicial</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        <li><a href="/coisas">Coisas</a></li>
+    </ul>
+    <ul>
+        <li><a href="/coisa">Nova Coisa</a></li>
+    </ul>
+
+    <table width="75%" cellspacing="0" cellpadding="2" border="1">
+        <tr>
+            <th width="15%">Opções</th>
+            <th width="25%">Nome</th>
+            <th width="35%">Utilidade</th>
+            <th width="10%">Valor (R$)</th>
+            <th width="15%">Categoria</th>
+        </tr>
+        {% if qtd > 0 %}
+            {% for coi in coisas %}
+                <tr>
+                    <td>
+                        <a href="/coisa/{{coi['id']}}">[editar]</a>
+                        <a href="/coisa_excluir/{{coi['id']}}">[excluir]</a>
+                    </td>
+                    <td>{{ coi['nome'] }}</td>
+                    <td>{{ coi['utilidade'] }}</td>
+                    <td>{{ coi['valor'] }}</td>
+                    <td>{{ coi['categoria_descricao'] }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="5">(nenhum registro)</td>
+            </tr>
+        {% endif %}
+
+
+    </table>
+
+</body>
+

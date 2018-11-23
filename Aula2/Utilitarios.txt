@@ -1,0 +1,37 @@
+luizclaudio.github.io/aprendendo-python
+python para zumbis(Curso)
+
+vetor[]
+tuple()
+s = set(v)
+m=[ [1,2],[3,4] ]
+append
+sort()
+list(q)
+len(q)
+Dicionario
+d = {'chave1':23, 'chave2':56}
+
+>>> d = {'chave1':23, 'chave2':56}
+>>> d['chave1']
+23
+>>> a = 'alfa'
+>>> a.upper()
+'ALFA'
+>>> a.lower()
+'alfa'
+>>> a.startswith('z')
+False
+>>> a.startswith('al')
+True
+>>> a = a.lower()
+>>> a
+'alfa'
+>>> a.startswith('AL')
+False
+>>> a.index('f')
+2
+
+2 in v = true
+(verifica se o elemento pertence a lista)
+

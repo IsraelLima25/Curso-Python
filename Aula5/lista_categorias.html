@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+    <title>Minha Aplicação - Lista de Categorias</title>
+</head>
+
+<body>
+    <img src="/static/flask_logo.png" height="82" width="100">
+
+    <h1>Minha Aplicação</h1>
+
+    <h2>Lista de Categorias</h2>
+
+    <ul>
+        <li><a href="/inicial">Página Inicial</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        <li><a href="/coisas">Coisas</a></li>
+    </ul>
+    <ul>
+        <li><a href="/categoria">Nova Categoria</a></li>
+    </ul>
+
+    <table width="30%" cellspacing="0" cellpadding="2" border="1">
+        <tr>
+            <th width="100%">Descrição</th>
+        </tr>
+        {% if qtd > 0 %}
+            {% for cat in categorias %}
+                <tr>
+                    <td>
+                        <a href="/categoria/{{cat['id']}}">[editar]</a>
+                        {% if cat['id'] not in dependentes %}
+                            <a href="/categoria_excluir/{{cat['id']}}">[excluir]</a>
+                        {% else %}
+                            [excluir]
+                        {% endif %}
+                        {{ cat['descricao'] }}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td>(nenhum registro)</td>
+            </tr>
+
+        {% endif %}
+
+    </table>
+
+</body>
+

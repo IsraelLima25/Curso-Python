@@ -1,0 +1,33 @@
+Estudar Produto Cartesiano
+
+vetor vazio
+
+vetor2 = ['' for k in range(10)]
+print(vetor2)
+
+gera uma lista de multiplos de 2
+vetor3 = [k * 2 for k in range(10)]
+
+vetor4 = [k for k in range(20) if k % 2 ==0]
+
+dicionario
+
+chaves = ['alfa','beta']
+dicio = {}
+num=0
+
+for chave in chaves:
+	dicio[chave] = num
+	num+=1
+print(dicio)
+
+/*
+Funções de Dicionários
+
+print(dicio.keys())
+print(dicio.values())
+print(dicio.items())
+
+criar mini Crud com chaves
+
+
